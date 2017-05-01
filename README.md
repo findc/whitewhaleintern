@@ -54,7 +54,7 @@ Quick Start
 -----------
 
 * Replace this text with instructions on how to execute your program
-* What programming language did you use? See [here](http://ideone.com/) for the supported ones.
+* What programming language did you use? I used Java
 * Also tell us anything else the reviewer should know about your code
 
 
