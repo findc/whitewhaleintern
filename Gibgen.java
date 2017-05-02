@@ -22,15 +22,17 @@ public class Gibgen
             sentence = bufferedReader.readLine();
             bufferedReader.close();
         }
-        
+
         catch (FileNotFoundException ex)
         {
             System.out.println("File '" + fileName + "' was not found");
+            System.exit(0);
         }
 
         catch (IOException ex)
         {
             System.out.println("Error reading from '" + fileName + "'");
+            System.exit(0);
         }
 
         preliminaryConversion(sentence);
@@ -46,15 +48,15 @@ public class Gibgen
         {
             if(tokens[i].length() > 5)
             {
-
+                scrambleToGibberish(tokens[i]);
             }
             else if(tokens[i].length() == 4)
             {
-
+                manualGibberishFour(tokens[i]);
             }
             else if(tokens[i].length() == 5)
             {
-
+                manualGibberishFive(tokens[i]);
             }
             else
             {
@@ -63,6 +65,37 @@ public class Gibgen
         }
     }
 
+    public static void scrambleToGibberish(String word)
+    {
+        Random randomizer = new Random();
+        char characters[] = word.toCharArray();
 
+        for (int i = 1 ; i < characters.length - 2 ; i++)
+        {
+            int j = randomizer.nextInt(characters.length - 2) + 1;
+            char temporary = characters[i];
+            characters[i] = characters[j];
+            characters[j] = temporary;
+        }
+        System.out.println(characters);
+    }
+
+    public static void manualGibberishFour(String word)
+    {
+        char characters[] = word.toCharArray();
+        char temporary = characters[1];
+        characters[1] = characters[2];
+        characters[2] = temporary;
+        System.out.println(characters);
+    }
+
+    public static void manualGibberishFive(String word)
+    {
+        char characters[] = word.toCharArray();
+        char temporary = characters[1];
+        characters[1] = characters[3];
+        characters[3] = temporary;
+        System.out.println(characters);
+    }
 
 }
