@@ -53,9 +53,9 @@ For completion by applicant
 Quick Start
 -----------
 
-* Replace this text with instructions on how to execute your program
-* What programming language did you use? I used Java
-* Also tell us anything else the reviewer should know about your code
+* To execute the program compile and then run the Gibgen.java file with the text file 
+* that you would like converted in the the root directory of the java file. 
+* The programming language used is Java
 
 
 Coding Questions
@@ -63,6 +63,12 @@ Coding Questions
 
 Question 1: "How did you approach the problem?" (500 words or less)
 
+My approach to this problem was to first grab a sheet of paper and a pencil break down the problem down into smaller and smaller sub-problems until I have detailed and methodical basic instructions. 
 
+These basic instructions gave me a good initial development plan that lead me to determine that I would first need to do some exception handling for file input. Next I determined from the development plan that I needed to delimit the captured text to an array. Next from my development plan I determined that the best course of action was to use a selection statement to break down whether a word had a length of 4 characters, 5 characters, or more, since these would require different types of shuffles. I then created methods to deal with each of these situations. 
+
+Throughout this whole process I did research on how to do certain things and what shuffle algorithm to use by googling questions, and confirming possible implementations with a few Java textbooks.  
 
 Question 2: "What was the most difficult aspect of the solution?" (500 words or less)
+
+The most difficult aspect of the solution was figuring out what was the best data structure to actually solve the problem. Should I use an arraylist, perhaps a simple array, or would a deque be more appropriate. I settled on a simple array because it checked all the boxes I needed and was the least amount of hassle. Also as is the case with all programs, naming things can be tough. Variables names and method names should be meaningful and reveal intention. This is always more difficult to do than you originally think it will be.
