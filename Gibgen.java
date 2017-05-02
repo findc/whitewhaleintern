@@ -15,6 +15,7 @@ public class Gibgen
         String fileName = reader.nextLine();
         String sentence = null;
 
+        //Read in text file
         try
         {
             FileReader fileReader = new FileReader(fileName);
@@ -23,12 +24,14 @@ public class Gibgen
             bufferedReader.close();
         }
 
+        //Output error message if exception takes place
         catch (FileNotFoundException ex)
         {
             System.out.println("File '" + fileName + "' was not found");
             System.exit(0);
         }
 
+        //Output error message if exception takes place
         catch (IOException ex)
         {
             System.out.println("Error reading from '" + fileName + "'");
@@ -58,10 +61,7 @@ public class Gibgen
             {
                 manualGibberishFive(tokens[i]);
             }
-            else
-            {
-
-            }
+           
         }
     }
 
@@ -91,7 +91,7 @@ public class Gibgen
         System.out.println(characters);
     }
 
-    //scrambles words with a lenght of five
+    //scrambles words with a length of five
     public static void manualGibberishFive(String word)
     {
         char characters[] = word.toCharArray();
