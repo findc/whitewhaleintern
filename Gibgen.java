@@ -65,6 +65,7 @@ public class Gibgen
         }
     }
 
+    //Scrambles words larger than five
     public static void scrambleToGibberish(String word)
     {
         Random randomizer = new Random();
@@ -80,6 +81,7 @@ public class Gibgen
         System.out.println(characters);
     }
 
+    //Scrambles words with a length of four
     public static void manualGibberishFour(String word)
     {
         char characters[] = word.toCharArray();
@@ -89,6 +91,7 @@ public class Gibgen
         System.out.println(characters);
     }
 
+    //scrambles words with a lenght of five
     public static void manualGibberishFive(String word)
     {
         char characters[] = word.toCharArray();
